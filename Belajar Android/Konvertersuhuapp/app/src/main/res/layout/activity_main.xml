@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Konversi Suhu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Tempat untuk gambar termometer -->
+    <ImageView
+        android:id="@+id/gambar_termometer"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/judul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/termometer"
+        android:contentDescription="Gambar Termometer"/>
+
+    <!-- Input Suhu -->
+    <EditText
+        android:id="@+id/input_suhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gambar_termometer"
+        android:layout_marginTop="20dp"
+        android:hint="Masukkan suhu"
+        android:inputType="numberDecimal|numberSigned"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textSize="18sp"/>
+
+    <!-- Spinner untuk memilih konversi -->
+    <Spinner
+        android:id="@+id/spinner_konversi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_suhu"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/spinner_background"
+        android:padding="12dp"/>
+
+    <!-- Tombol Konversi -->
+    <Button
+        android:id="@+id/tombol_konversi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_konversi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Konversi"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"/>
+
+    <!-- Hasil Konversi -->
+    <TextView
+        android:id="@+id/hasil_suhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tombol_konversi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="0.0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3498DB"/>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.AddItemActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Barang Baru"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kode Barang (Contoh: BRG001)"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Barang"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stok"
+        android:inputType="number"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Harga (Contoh: 15000.00)"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Barang"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

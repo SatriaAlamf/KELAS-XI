@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/teksAngka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="160sp" android:textColor="#424242" android:textStyle="bold"
+        android:fontFamily="sans-serif-light" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4" /> <LinearLayout
+    android:id="@+id/wadahTombolVertikal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" android:gravity="center_horizontal"
+    app:layout_constraintTop_toBottomOf="@id/teksAngka"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="48dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tombolTambah"
+        android:layout_width="180dp" android:layout_height="80dp" android:text="TAMBAH"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:cornerRadius="24dp" android:backgroundTint="#4CAF50" android:elevation="8dp" android:stateListAnimator="@null" android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tombolKurang"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="KURANG"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:cornerRadius="24dp"
+        android:backgroundTint="#FF5722" android:elevation="8dp"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tombolReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="#9E9E9E" app:tint="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_rotate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

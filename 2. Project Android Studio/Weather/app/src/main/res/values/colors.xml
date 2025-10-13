@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Colors -->
+    <color name="primary_blue">#4A90E2</color>
+    <color name="primary_light_blue">#87CEEB</color>
+    <color name="primary_dark_blue">#2C3E50</color>
+    
+    <!-- Weather Text Colors -->
+    <color name="weather_text">#2C3E50</color>
+    <color name="weather_text_light">#7D8D9E</color>
+    
+    <!-- Background Colors -->
+    <color name="background_clear">#87CEEB</color>
+    <color name="background_clouds">#A5B7C9</color>
+    <color name="background_rain">#697D8C</color>
+    <color name="background_snow">#E3F2F9</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_red">#F44336</color>
+    <color name="accent_green">#4CAF50</color>
+</resources>

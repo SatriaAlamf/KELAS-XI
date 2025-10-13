@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#405DE6</color>
+    <color name="colorPrimaryDark">#3449C7</color>
+    <color name="colorAccent">#E1306C</color>
+    
+    <!-- Story Colors -->
+    <color name="story_border">#E1306C</color>
+    <color name="story_border_gradient_start">#F77737</color>
+    <color name="story_border_gradient_end">#E1306C</color>
+    
+    <!-- Background Colors -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="background_dark">#121212</color>
+    <color name="card_background">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#262626</color>
+    <color name="text_secondary">#8E8E8E</color>
+    <color name="text_hint">#DBDBDB</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary">#0095F6</color>
+    <color name="button_disabled">#B2DFFC</color>
+    
+    <!-- Other Colors -->
+    <color name="edit_text_background">#FAFAFA</color>
+    <color name="divider">#EFEFEF</color>
+    <color name="notification_unread">#E8F5FE</color>
+    <color name="like_red">#ED4956</color>
+</resources>

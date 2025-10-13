@@ -1,0 +1,40 @@
+{
+  "IMPORTANT": "This is a PLACEHOLDER file!",
+  "ACTION_REQUIRED": "Replace this file with your actual google-services.json from Firebase Console",
+  "INSTRUCTIONS": [
+    "1. Go to https://console.firebase.google.com/",
+    "2. Select or create your project",
+    "3. Add an Android app with package name: com.example.mediasocial",
+    "4. Download the google-services.json file",
+    "5. Replace THIS file with the downloaded file",
+    "6. Sync Gradle and rebuild the project"
+  ],
+  "project_info": {
+    "project_number": "YOUR_PROJECT_NUMBER",
+    "firebase_url": "https://YOUR_PROJECT_ID.firebaseio.com",
+    "project_id": "YOUR_PROJECT_ID",
+    "storage_bucket": "YOUR_PROJECT_ID.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:YOUR_PROJECT_NUMBER:android:YOUR_APP_ID",
+        "android_client_info": {
+          "package_name": "com.example.mediasocial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

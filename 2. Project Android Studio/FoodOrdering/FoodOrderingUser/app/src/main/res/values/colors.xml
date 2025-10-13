@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Order Status Colors -->
+    <color name="status_pending">#FF9800</color>
+    <color name="status_confirmed">#2196F3</color>
+    <color name="status_preparing">#FF5722</color>
+    <color name="status_out_for_delivery">#9C27B0</color>
+    <color name="status_delivered">#4CAF50</color>
+    <color name="status_cancelled">#F44336</color>
+    <color name="status_refunded">#607D8B</color>
+    
+    <!-- App Colors -->
+    <color name="primary_color">#FF6B35</color>
+    <color name="primary_dark">#E55722</color>
+    <color name="accent_color">#FFC107</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider_color">#E0E0E0</color>
+</resources>

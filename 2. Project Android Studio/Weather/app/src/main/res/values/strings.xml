@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Weather</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_tagline">Cuaca Akurat, Setiap Saat</string>
+    
+    <!-- Main Activity -->
+    <string name="search_city_hint">Cari kota…</string>
+    <string name="search">Cari</string>
+    <string name="current_location">Lokasi Saat Ini</string>
+    <string name="loading">Memuat…</string>
+    
+    <!-- Weather Details -->
+    <string name="weather_icon">Ikon Cuaca</string>
+    <string name="feels_like">Terasa Seperti</string>
+    <string name="humidity">Kelembaban</string>
+    <string name="wind_speed">Kecepatan Angin</string>
+    <string name="pressure">Tekanan</string>
+    
+    <!-- Error Messages -->
+    <string name="error_city_not_found">Kota tidak ditemukan</string>
+    <string name="error_network">Periksa koneksi internet Anda</string>
+    <string name="error_permission">Izin lokasi diperlukan</string>
+</resources>

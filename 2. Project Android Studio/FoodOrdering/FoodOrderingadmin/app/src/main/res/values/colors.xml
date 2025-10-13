@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <color name="colorPrimary">#FF6B35</color>
+    <color name="colorPrimaryDark">#E85A2A</color>
+    <color name="colorAccent">#FFC107</color>
+    
+    <color name="background">#F5F5F5</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+    
+    <color name="status_pending">#FF9800</color>
+    <color name="status_confirmed">#2196F3</color>
+    <color name="status_preparing">#9C27B0</color>
+    <color name="status_delivery">#FF5722</color>
+    <color name="status_delivered">#4CAF50</color>
+    <color name="status_cancelled">#F44336</color>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Jenis Konten"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:paddingBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Buat Postingan"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateStory"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:text="Buat Story"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Batal"
+        android:textAllCaps="false"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:textColor="@color/text_secondary"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+</LinearLayout>

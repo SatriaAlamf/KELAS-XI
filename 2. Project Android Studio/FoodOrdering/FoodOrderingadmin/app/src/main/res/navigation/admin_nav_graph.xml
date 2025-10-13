@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.jetpackcompose.foodorderingadmin.fragments.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.jetpackcompose.foodorderingadmin.fragments.OrdersFragment"
+        android:label="Orders" />
+
+    <fragment
+        android:id="@+id/navigation_foods"
+        android:name="com.jetpackcompose.foodorderingadmin.fragments.FoodsFragment"
+        android:label="Foods" />
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.jetpackcompose.foodorderingadmin.fragments.CategoriesFragment"
+        android:label="Categories" />
+</navigation>

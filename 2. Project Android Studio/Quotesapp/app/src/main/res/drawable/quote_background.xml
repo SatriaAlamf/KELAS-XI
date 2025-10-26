@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Background color untuk kontainer kutipan -->
+    <solid android:color="#2C2C2C" />
+    
+    <!-- Corner radius hanya untuk sudut kiri bawah dan kanan atas -->
+    <corners
+        android:topLeftRadius="0dp"
+        android:topRightRadius="24dp"
+        android:bottomLeftRadius="24dp"
+        android:bottomRightRadius="0dp" />
+    
+    <!-- Stroke untuk memberikan border -->
+    <stroke
+        android:width="2dp"
+        android:color="#404040" />
+
+</shape>

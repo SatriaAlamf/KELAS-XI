@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Quote App</string>
+    
+    <!-- UI Text -->
+    <string name="share_option">Share Option</string>
+    <string name="quote_logo_desc">Quote App Logo</string>
+    
+    <!-- Sample Quote -->
+    <string name="sample_quote">"The only way to do great work is to love what you do. Stay hungry, stay foolish."</string>
+    <string name="sample_quote_source">- Steve Jobs</string>
+    
+    <!-- Additional Quotes for variety -->
+    <string name="quote_1">"Innovation distinguishes between a leader and a follower."</string>
+    <string name="quote_source_1">- Steve Jobs</string>
+    
+    <string name="quote_2">"The future belongs to those who believe in the beauty of their dreams."</string>
+    <string name="quote_source_2">- Eleanor Roosevelt</string>
+    
+    <string name="quote_3">"It is during our darkest moments that we must focus to see the light."</string>
+    <string name="quote_source_3">- Aristotle</string>
+    
+    <string name="quote_4">"Success is not final, failure is not fatal: it is the courage to continue that counts."</string>
+    <string name="quote_source_4">- Winston Churchill</string>
+    
+    <!-- Share Intent -->
+    <string name="share_quote_title">Share this amazing quote</string>
+    
+</resources>

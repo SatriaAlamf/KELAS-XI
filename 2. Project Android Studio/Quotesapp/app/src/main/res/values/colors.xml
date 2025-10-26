@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- App Theme Colors -->
+    <color name="dark_background">#1A1A1A</color>
+    <color name="quote_container">#2C2C2C</color>
+    <color name="quote_border">#404040</color>
+    <color name="light_gray">#B0B0B0</color>
+    
+    <!-- Share Button Colors -->
+    <color name="share_button">#4CAF50</color>
+    <color name="share_button_pressed">#45A049</color>
+    
+    <!-- Material Design Colors -->
+    <color name="primary_color">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="accent_color">#FF5722</color>
+    
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="go">GO</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="refresh">Refresh</string>
+    <string name="loading">Loading...</string>
+    <string name="ready">Ready</string>
+    <string name="error_loading">Error loading page</string>
+</resources>

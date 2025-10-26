@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">CGPA Calculator</string>
+    <string name="app_description">Calculate your Cumulative Grade Point Average</string>
+    
+    <!-- Main Screen -->
+    <string name="add_course">Add Course</string>
+    <string name="course_name">Course Name</string>
+    <string name="grade">Grade</string>
+    <string name="credit_hours">Credit Hours</string>
+    <string name="semester_name">Semester Name</string>
+    <string name="save_semester">Save Semester</string>
+    <string name="reset_all">Reset All</string>
+    <string name="calculate_cgpa">Calculate CGPA</string>
+    
+    <!-- Results -->
+    <string name="your_cgpa">Your CGPA</string>
+    <string name="out_of_four">out of 4.0</string>
+    <string name="semesters">Semesters</string>
+    <string name="total_credits">Total Credits</string>
+    <string name="percentage">Percentage</string>
+    
+    <!-- Course List -->
+    <string name="current_semester_courses">Current Semester Courses</string>
+    <string name="total_courses">Total Courses: %1$d</string>
+    <string name="total_credits_format">Total Credits: %1$.1f</string>
+    <string name="remove_course">Remove Course</string>
+    
+    <!-- Semester Management -->
+    <string name="semester_management">Semester Management</string>
+    <string name="previous_semesters">Previous Semesters</string>
+    <string name="remove_semester">Remove Semester</string>
+    <string name="gpa_format">GPA: %1$.2f</string>
+    <string name="credits_format">Credits: %1$.1f</string>
+    <string name="courses_format">Courses: %1$d</string>
+    
+    <!-- Instructions -->
+    <string name="how_to_use">How to Use</string>
+    <string name="instruction_1">1. Enter course name, select grade, and input credit hours</string>
+    <string name="instruction_2">2. Click \'Add Course\' to add it to current semester</string>
+    <string name="instruction_3">3. Enter semester name (e.g., \'Fall 2023\')</string>
+    <string name="instruction_4">4. Click \'Save Semester\' to finalize the semester</string>
+    <string name="instruction_5">5. Repeat for all semesters to calculate overall CGPA</string>
+    <string name="grade_scale_info">Grade Scale: A+ (4.0), A (4.0), A- (3.7), B+ (3.3), B (3.0), B- (2.7), C+ (2.3), C (2.0), C- (1.7), D+ (1.3), D (1.0), F (0.0)</string>
+    
+    <!-- Academic Standing -->
+    <string name="summa_cum_laude">Summa Cum Laude</string>
+    <string name="magna_cum_laude">Magna Cum Laude</string>
+    <string name="cum_laude">Cum Laude</string>
+    <string name="good_standing">Good Standing</string>
+    <string name="satisfactory">Satisfactory</string>
+    <string name="probationary">Probationary</string>
+    <string name="academic_warning">Academic Warning</string>
+    
+    <!-- Placeholders -->
+    <string name="semester_name_placeholder">e.g., Fall 2023, Semester 1</string>
+    <string name="course_name_placeholder">Enter course name</string>
+    
+    <!-- Validation Messages -->
+    <string name="invalid_input">Please check your input</string>
+    <string name="course_added">Course added successfully</string>
+    <string name="semester_saved">Semester saved successfully</string>
+    <string name="all_data_reset">All data has been reset</string>
+</resources>

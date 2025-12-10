@@ -1,0 +1,65 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Background Circle with Gradient Effect -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M60,5 A55,55 0 1,1 60,115 A55,55 0 1,1 60,5 Z"/>
+    
+    <!-- Inner Circle -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M60,12 A48,48 0 1,1 60,108 A48,48 0 1,1 60,12 Z"/>
+    
+    <!-- Book Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,45 L35,85 C35,87 36,88 38,88 L82,88 C84,88 85,87 85,85 L85,45 C85,43 84,42 82,42 L38,42 C36,42 35,43 35,45 Z"/>
+    
+    <!-- Book Pages -->
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M40,47 L80,47 L80,83 L40,83 Z"/>
+    
+    <!-- Book Spine -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M58,42 L58,88 L62,88 L62,42 Z"/>
+    
+    <!-- Graduation Cap Base -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M60,28 L35,38 L60,48 L85,38 Z"/>
+    
+    <!-- Cap Top -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M55,32 L65,32 L62,38 L58,38 Z"/>
+    
+    <!-- Tassel -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M62,32 L62,38 M62,38 C62,40 63,42 65,42"/>
+    
+    <!-- Book Lines (Text) -->
+    <path
+        android:fillColor="#1976D2"
+        android:strokeColor="#1976D2"
+        android:strokeWidth="1.5"
+        android:pathData="M45,55 L72,55 M45,62 L75,62 M45,69 L70,69 M45,76 L73,76"/>
+    
+    <!-- Star Accent -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M60,60 L61,63 L64,63 L62,65 L63,68 L60,66 L57,68 L58,65 L56,63 L59,63 Z"/>
+    
+    <!-- Decorative Border -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="2"
+        android:pathData="M60,10 A50,50 0 1,1 60,110 A50,50 0 1,1 60,10 Z"/>
+</vector>

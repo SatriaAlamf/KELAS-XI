@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Buku - PinjamIn Perpus</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#307e32", // Deep Green
+                        "secondary": "#DDAA88", // Terracotta
+                        "background-light": "#f8f7f7",
+                        "background-dark": "#1a1f23",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#242a30",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "card": "0 2px 8px -1px rgba(0, 0, 0, 0.04)",
+                        "nav": "0 -4px 20px -2px rgba(0, 0, 0, 0.03)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#131613] dark:text-gray-100 antialiased selection:bg-primary/20">
+<div class="relative flex min-h-screen w-full flex-col pb-24 overflow-x-hidden group/design-root">
+<!-- Header Section (Sticky) -->
+<header class="sticky top-0 z-30 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between px-4 pt-12 pb-2 md:pt-4"> <!-- Added pt-12 for iOS status bar simulation on web -->
+<div class="w-10">
+<!-- Placeholder for balance -->
+</div>
+<h2 class="text-xl font-bold tracking-tight text-center text-gray-900 dark:text-white">Katalog Buku</h2>
+<div class="w-10 flex justify-end">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="group relative flex items-center w-full h-12 rounded-xl bg-white dark:bg-surface-dark shadow-sm border border-gray-200/50 dark:border-gray-700 transition-all focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary">
+<div class="flex items-center justify-center pl-4 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex-1 w-full h-full bg-transparent border-none focus:ring-0 px-3 text-base text-gray-900 dark:text-white placeholder:text-gray-400 font-medium" placeholder="Cari judul, penulis, ISBN..." value=""/>
+<button class="pr-4 text-primary hover:text-primary/80 transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</label>
+</div>
+<!-- Chips (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto no-scrollbar pb-3 pt-1 px-4">
+<div class="flex gap-3 min-w-max">
+<!-- Active Chip -->
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-sm shadow-primary/30 transition-transform active:scale-95">
+<span class="text-white text-sm font-semibold tracking-wide">Semua</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-all active:scale-95 hover:border-gray-300 dark:hover:border-gray-600">
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium">Tersedia</span>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-all active:scale-95 hover:border-gray-300 dark:hover:border-gray-600">
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium">Dipinjam</span>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-all active:scale-95 hover:border-gray-300 dark:hover:border-gray-600">
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium">Favorit</span>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-all active:scale-95 hover:border-gray-300 dark:hover:border-gray-600">
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium">E-Book</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-4">
+<!-- Results count & Sort -->
+<div class="flex items-center justify-between mb-4 px-1">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Menampilkan 24 buku</p>
+<button class="flex items-center gap-1 text-sm font-bold text-primary">
+                    Terbaru
+                    <span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-2 gap-4 pb-4">
+<!-- Book Item 1 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Laskar Pelangi showing children running on a beach" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsJOAgtFpJTxowHLrnXfJ7BJx0gy4SHX1j4f6ydJI8PtV3ESbm779ECGDW5QkWVTx3xKtj9gdX70muSSwxG4v1JGJf67TD5YlbaCFkSXkkqB8DT-MbO4DpPAxinjFjtEtwwwS-6m39kADHl_o2cbxRKhl002DAZdFL8vKTQ32rAXUBzJyla2AWx6ClWdZEKLI7mmL_a_iRAzi_TzUD-NHCguIS3CR6-qiA7AWjnpDY4_aWTlonH1fCRfT9u7UFsNYr-cTly_fPQg");'></div>
+<div class="absolute top-2 right-2">
+<button class="size-8 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">Laskar Pelangi</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">Andrea Hirata</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">
+<span class="size-1.5 rounded-full bg-primary"></span>
+                                Tersedia: 3
+                            </span>
+</div>
+</div>
+</div>
+<!-- Book Item 2 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Laut Bercerita featuring deep blue sea aesthetic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgrxBlHZwT9IxvBZ6YpWN2yV0bHmSjcYCT2BCS83xOz3-obi2kchbiwtJQ4tRahU3SsazkSrkEasZUh1mAkLseqv-8eVisrU5olaQ3fv5kWZbr2qNYwIkn_SR6pimc-W7PWgZWbs_OFS8Rli-2SMxtIcWs9QkR_FqXbK0_wMgiE0vyU8HrFDzNeczLWlcLXqydOb-MgpSiHznxtHa3O_C5DKmxFy-ijxEmowVUh7UllRbzIatAU7V7D9fX1sGiq-xQfXO6dJ76nA");'></div>
+<!-- Overlay for unavailable -->
+<div class="absolute inset-0 bg-white/10 dark:bg-black/20"></div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">Laut Bercerita</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">Leila S. Chudori</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-secondary/15 px-2 py-1 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/30">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                                Dipinjam
+                            </span>
+</div>
+</div>
+</div>
+<!-- Book Item 3 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Atomic Habits showing abstract geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSob-NtbzGDpFPpga-phs0IAWbPtkqm_zqgBF1rAyjglJlZ88m14jgkHduZeUlc6cQr8OuUbWB7gyPjv2AGMCzecRRB8JTegYI0DDECzmaptLvi2NIIkpVXIo0HQYYjMRV_z-uUWOKVQbHo1gtIZfYvf_MIT1dszF8aZtnEr-QD_uh6y7C-FwmvQbEgsAZpIVtXJ48SyfeyXSElaNgNiNwi6nCxLEfiL6qPpbyF52svVDBV8WghfBiJ81TiW-geVmZOlgZZZ58Wg");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">Atomic Habits</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">James Clear</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">
+<span class="size-1.5 rounded-full bg-primary"></span>
+                                Tersedia: 1
+                            </span>
+</div>
+</div>
+</div>
+<!-- Book Item 4 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Filosofi Teras with stoic statue imagery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQsGKPwdnnttcnVENF79LZMsZd2-IQPzWLl1o4r4eW0iverneDaSakJIlQrCxpkGQndvaj51SOTxregYtelAN5v6XfJYVo-hvHQhaS7io3Bk80tGrrqW3oSZn21ytU8BIW4HZjLaQ98tlKVI_lhAhElQe2fZjFumIGRRB1_m4ryqzG8g0QKQ8p0qN_ziVqooseNznwPB56oWLps7JbkhW903rISqZ4vP-kIdnGQKJVxk6WxS6vtWvSKxlI7wR_rMPXnJiHzyBIKQ");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">Filosofi Teras</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">Henry Manampiring</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">
+<span class="size-1.5 rounded-full bg-primary"></span>
+                                Tersedia: 5
+                            </span>
+</div>
+</div>
+</div>
+<!-- Book Item 5 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Design of Everyday things" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJH3yVZ6SK1Wj8FIRLV6KlCXXAy4lFlMoszCpukv0GfSkTDJOEzOvLJSuelHcJfEazUKjrs-uYN8GT6iAdnbiCUNBqADuPfv3uluFbr_57_1G824irjhuwXyV0D1RLNFGv6Si9FOvbm5jaU4Z8_L49PPLFzXyAuFGLQ87rr8zLiQHJ1VziS7NZZFCnCiu2atQw1nqjG9TKCZIl1zV4YCkjqKTStN1XV7ZpJRRvfhetyZRMfvuLG-rPjpM979j_0Qes0VUW38zskw");'></div>
+<div class="absolute top-2 right-2">
+<button class="size-8 rounded-full bg-red-50 dark:bg-red-900/40 backdrop-blur-sm flex items-center justify-center text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[18px] fill-current">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">The Design of Everyday Things</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">Don Norman</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-secondary/15 px-2 py-1 text-xs font-bold text-secondary ring-1 ring-inset ring-secondary/30">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                                Dipinjam
+                            </span>
+</div>
+</div>
+</div>
+<!-- Book Item 6 -->
+<div class="group flex flex-col gap-3 p-3 rounded-xl bg-white dark:bg-surface-dark shadow-card hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
+<div class="relative w-full aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Book cover of Sapiens with historical human evolution art" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgnPLsnzsS70KHKM--aK2oTkU9IAlLDb2-yrWcnU_ft2AIaANAGUcYx_-0Pty7zkacb-QhjGi9BkBTu9BvLIMUFEoGDgoeyRt3HTRsp8KNwhdTaCOcxwCwxpLCTK1uMSp9-3Kyp28ft77jFRQ_MAwq08FRUuriwWXdySrx9aI4dlEf4fEaHif-3NvLYuPRUpwL6UCMXGcuJe6DZ9tTH_MpoRQpkmX5wiOeNnIC9OdwrG2e-Y_I_Axq-TYy3xg-qkhqrNYGCnIyhg");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight line-clamp-2">Sapiens: A Brief History of Humankind</h3>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium line-clamp-1">Yuval Noah Harari</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">
+<span class="size-1.5 rounded-full bg-primary"></span>
+                                Tersedia: 8
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Button -->
+<div class="flex py-6 justify-center">
+<button class="relative flex items-center justify-center overflow-hidden rounded-full h-11 px-8 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm font-bold shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-all active:scale-95">
+<span class="mr-2">Muat Lebih Banyak</span>
+<span class="material-symbols-outlined text-[18px] animate-bounce mt-1">keyboard_arrow_down</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 z-40 w-full bg-white dark:bg-surface-dark shadow-nav border-t border-gray-100 dark:border-gray-800 pb-safe">
+<div class="flex h-16 items-center justify-around px-2">
+<a class="group flex flex-col items-center justify-center gap-1 w-16 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">home</span>
+<span class="text-[10px] font-medium">Beranda</span>
+</a>
+<a class="group flex flex-col items-center justify-center gap-1 w-16 text-primary" href="#">
+<div class="bg-primary/10 rounded-2xl px-4 py-1 flex justify-center items-center">
+<span class="material-symbols-outlined text-[24px] font-bold">menu_book</span>
+</div>
+<span class="text-[10px] font-bold">Katalog</span>
+</a>
+<a class="group flex flex-col items-center justify-center gap-1 w-16 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">bookmark_border</span>
+<span class="text-[10px] font-medium">Pinjaman</span>
+</a>
+<a class="group flex flex-col items-center justify-center gap-1 w-16 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+<!-- Safe area spacing for iOS home indicator -->
+<div class="h-4 w-full bg-white dark:bg-surface-dark"></div>
+</nav>
+</div>
+</body></html>

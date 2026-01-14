@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifikasi - PinjamIn Perpus</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3C713D", 
+                        "primary-light": "#EBF2EB",
+                        "secondary": "#C9A961",
+                        "urgent": "#753448",
+                        "urgent-light": "#FBEFF3",
+                        "ivory": "#FAF7F2",
+                        "ivory-dark": "#18181a", 
+                        "surface": "#FFFFFF",
+                        "surface-dark": "#242426",
+                        "text-main": "#2B2D2F",
+                        "text-main-dark": "#E5E5E7",
+                        "text-muted": "#6E7072",
+                        "text-muted-dark": "#A1A1AA",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ['"Noto Serif"', "serif"],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(60, 113, 61, 0.1)',
+                        'card': '0 2px 4px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02)',
+                    },
+                    backgroundImage: {
+                        'paper-pattern': "radial-gradient(#E8E4DD 1px, transparent 1px)",
+                        'paper-pattern-dark': "radial-gradient(#333333 1px, transparent 1px)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D5DB;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4B5563;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-ivory dark:bg-ivory-dark bg-paper-pattern dark:bg-paper-pattern-dark bg-[length:24px_24px] text-text-main dark:text-text-main-dark min-h-screen font-display antialiased pb-10 transition-colors duration-300">
+<!-- Top App Bar -->
+<!-- Sticky header with backdrop blur to maintain content visibility underneath -->
+<header class="sticky top-0 z-50 bg-ivory/85 dark:bg-ivory-dark/85 backdrop-blur-md px-4 py-3 flex items-center justify-between transition-colors duration-300 border-b border-black/[0.03] dark:border-white/[0.05]">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors group active:scale-95">
+<span class="material-symbols-outlined text-text-main dark:text-text-main-dark text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-xl font-serif font-bold tracking-[-0.01em] text-text-main dark:text-text-main-dark">Notifikasi</h1>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-text-muted dark:text-text-muted-dark transition-colors">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</button>
+</header>
+<main class="px-4 max-w-lg mx-auto w-full flex flex-col gap-8 pt-6">
+<!-- Section: Hari Ini -->
+<section class="flex flex-col gap-4">
+<h2 class="text-xs font-bold text-text-muted dark:text-text-muted-dark uppercase tracking-widest px-1 opacity-80">Hari Ini</h2>
+<!-- Card 1: Urgent (Due Date) -->
+<!-- Using a subtle red accent for urgency without being alarming -->
+<article class="group relative flex flex-col gap-3 bg-surface dark:bg-surface-dark p-5 rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 active:scale-[0.99] ring-1 ring-black/[0.03] dark:ring-white/[0.05] overflow-hidden cursor-pointer">
+<!-- Vertical accent bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-urgent"></div>
+<div class="flex items-start gap-4">
+<!-- Icon Box -->
+<div class="flex-shrink-0 size-12 rounded-xl bg-urgent-light dark:bg-urgent/20 flex items-center justify-center text-urgent dark:text-pink-300">
+<span class="material-symbols-outlined text-[24px]">priority_high</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-serif font-bold text-[17px] text-text-main dark:text-white leading-tight truncate pr-2">Buku Jatuh Tempo</h3>
+<!-- Pulse dot for "New" -->
+<span class="flex-shrink-0 size-2.5 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(60,113,61,0.6)]" title="Belum dibaca"></span>
+</div>
+<p class="text-xs font-semibold text-urgent dark:text-pink-300 mb-1.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] icon-filled">schedule</span>
+                            Perlu tindakan • 2 jam yang lalu
+                        </p>
+<p class="text-[15px] text-text-muted dark:text-gray-400 leading-relaxed">
+<span class="italic font-serif text-text-main dark:text-gray-200">The Great Gatsby</span> harus dikembalikan besok. Perpanjang sekarang jika perlu.
+                        </p>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-1 pt-3 border-t border-black/[0.04] dark:border-white/[0.05] flex items-center justify-end">
+<button class="text-sm font-bold text-urgent dark:text-pink-300 flex items-center gap-1 hover:bg-urgent-light/50 dark:hover:bg-urgent/10 px-3 py-1.5 rounded-lg transition-colors">
+                        Perpanjang Peminjaman <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Success (Borrowed) -->
+<article class="group relative flex items-start gap-4 bg-surface dark:bg-surface-dark p-5 rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 active:scale-[0.99] ring-1 ring-black/[0.03] dark:ring-white/[0.05] cursor-pointer">
+<!-- Vertical accent bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex-shrink-0 size-12 rounded-xl bg-primary-light dark:bg-primary/20 flex items-center justify-center text-primary dark:text-green-300">
+<span class="material-symbols-outlined text-[24px] icon-filled">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-serif font-bold text-[17px] text-text-main dark:text-white leading-tight">Peminjaman Berhasil</h3>
+<span class="px-2 py-0.5 bg-primary/10 dark:bg-primary/30 text-primary dark:text-green-300 text-[10px] font-bold uppercase tracking-wider rounded-full border border-primary/20">Baru</span>
+</div>
+<p class="text-xs text-text-muted dark:text-gray-500 mb-1.5">5 jam yang lalu</p>
+<p class="text-[15px] text-text-muted dark:text-gray-400 leading-relaxed">
+                        Anda telah berhasil meminjam <span class="italic font-serif text-text-main dark:text-gray-200">Sapiens</span>. Selamat membaca!
+                    </p>
+</div>
+</article>
+</section>
+<!-- Section: Minggu Ini -->
+<section class="flex flex-col gap-4">
+<h2 class="text-xs font-bold text-text-muted dark:text-text-muted-dark uppercase tracking-widest px-1 opacity-80">Minggu Ini</h2>
+<!-- Card 3: New Collection (Gold Accent) -->
+<article class="group relative flex items-start gap-4 bg-surface dark:bg-surface-dark p-5 rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 active:scale-[0.99] ring-1 ring-black/[0.03] dark:ring-white/[0.05] cursor-pointer">
+<div class="flex-shrink-0 size-12 rounded-xl bg-secondary/10 dark:bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-serif font-bold text-[17px] text-text-main dark:text-white leading-tight">Koleksi Baru Tersedia</h3>
+</div>
+<p class="text-xs text-text-muted dark:text-gray-500 mb-1.5">Kemarin</p>
+<p class="text-[15px] text-text-muted dark:text-gray-400 leading-relaxed line-clamp-2">
+                        Kami menambahkan 50 buku fiksi ilmiah baru minggu ini. Temukan petualangan barumu di rak "Sci-Fi".
+                    </p>
+</div>
+<div class="self-center flex-shrink-0">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</article>
+<!-- Card 4: Info (System) - More subtle styling -->
+<article class="group relative flex items-start gap-4 bg-surface dark:bg-surface-dark p-5 rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 active:scale-[0.99] ring-1 ring-black/[0.03] dark:ring-white/[0.05] cursor-pointer opacity-90 hover:opacity-100">
+<div class="flex-shrink-0 size-12 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-serif font-bold text-[17px] text-text-main dark:text-white leading-tight">Perpustakaan Tutup</h3>
+</div>
+<p class="text-xs text-text-muted dark:text-gray-500 mb-1.5">Senin lalu</p>
+<p class="text-[15px] text-text-muted dark:text-gray-400 leading-relaxed">
+                        Perpustakaan akan tutup pada hari libur nasional. Layanan online tetap tersedia.
+                    </p>
+</div>
+</article>
+</section>
+<!-- Aesthetic Footer Spacer -->
+<div class="py-8 text-center flex flex-col items-center justify-center gap-3 opacity-40">
+<div class="flex gap-2">
+<div class="w-1 h-1 rounded-full bg-text-muted"></div>
+<div class="w-1 h-1 rounded-full bg-text-muted"></div>
+<div class="w-1 h-1 rounded-full bg-text-muted"></div>
+</div>
+<p class="text-xs font-serif italic text-text-muted">Anda sudah melihat semua notifikasi</p>
+</div>
+</main>
+</body></html>

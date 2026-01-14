@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Riwayat Peminjaman</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#307e32",
+                        "primary-dark": "#235c24",
+                        "background-light": "#fafaf9",
+                        "background-dark": "#1b1a18",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2C2B28",
+                        "text-main": "#2C3033",
+                        "text-muted": "#636669",
+                        "alert-peach": "#FFB370",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        "card": "0 1px 3px rgba(0,0,0,0.05), 0 10px 15px -5px rgba(0,0,0,0.02)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="relative flex flex-col h-screen w-full bg-background-light dark:bg-background-dark overflow-hidden font-display transition-colors duration-300">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md pt-safe-top">
+<div class="flex items-center justify-between px-5 py-4">
+<h1 class="text-2xl font-extrabold tracking-tight text-text-main dark:text-white">Riwayat</h1>
+<button class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-white" style="font-size: 24px;">notifications</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="px-5">
+<div class="flex border-b border-gray-200 dark:border-gray-700 relative">
+<button class="relative flex-1 pb-3 text-center transition-all group">
+<span class="text-primary font-bold text-sm tracking-wide">Dipinjam</span>
+<div class="absolute bottom-0 left-0 w-full h-[3px] bg-primary rounded-t-full"></div>
+</button>
+<button class="relative flex-1 pb-3 text-center transition-all group">
+<span class="text-text-muted dark:text-gray-400 font-medium text-sm tracking-wide group-hover:text-text-main dark:group-hover:text-white">Selesai</span>
+<div class="absolute bottom-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-gray-200 dark:group-hover:bg-gray-700 rounded-t-full transition-colors"></div>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24 px-5 pt-6">
+<div class="flex flex-col gap-6">
+<!-- Card 1: Urgent -->
+<article class="bg-surface-light dark:bg-surface-dark rounded-2xl p-4 shadow-card hover:shadow-soft transition-shadow duration-300 border border-transparent dark:border-gray-800">
+<div class="flex gap-4">
+<!-- Book Cover -->
+<div class="relative w-24 shrink-0 aspect-[2/3] rounded-lg overflow-hidden shadow-md group">
+<img alt="Cover of Atomic Habits book with abstract geometric design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADW0AxOF_cyMQUY9GWLvoqsQl6uD5W5aWWvFn--HFHao8_fsD3uXabanRJYzQ85C2UpPyXubcG3dOa-_rfP3RfW_5DXhWvfRICaVhl7Zc2vVcUHlIDnxdfRP4rOAueqgt_QLXS4vMgcnz6qWzV5-r-wnScjVNKUZK2IZSeT4ixyf69Bunp5BHzQwFE2h7nTN-EpJ28TDx97h1AGCdm_M08FrwmbDRIlYZsr0qX8vTgOLBtHvb6l_tZpEFEnbw6FjLYpSppY3YcRQ"/>
+<div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight line-clamp-2">Atomic Habits</h3>
+</div>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-3">James Clear</p>
+<!-- Due Date Badge (Urgent) -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-alert-peach/20 dark:bg-alert-peach/30 border border-alert-peach/30 w-fit mb-4">
+<span class="material-symbols-outlined text-orange-700 dark:text-orange-200 text-[14px]">priority_high</span>
+<span class="text-xs font-bold text-orange-800 dark:text-orange-100">Due tomorrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Section -->
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex justify-between items-end text-xs">
+<span class="text-text-muted dark:text-gray-400 font-medium">Time remaining</span>
+<span class="text-text-main dark:text-white font-bold">1 day</span>
+</div>
+<div class="h-2 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-3 mt-5">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-colors shadow-sm active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">keyboard_return</span>
+                        Kembalikan
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-white text-sm font-bold transition-colors active:scale-[0.98]">
+                        Perpanjang
+                    </button>
+</div>
+</article>
+<!-- Card 2: Safe -->
+<article class="bg-surface-light dark:bg-surface-dark rounded-2xl p-4 shadow-card hover:shadow-soft transition-shadow duration-300 border border-transparent dark:border-gray-800">
+<div class="flex gap-4">
+<!-- Book Cover -->
+<div class="relative w-24 shrink-0 aspect-[2/3] rounded-lg overflow-hidden shadow-md group">
+<img alt="Cover of Laut Bercerita featuring deep blue sea texture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIj8xCwDKbip6YErsKFGVkVdoUWP_p3_4pJkPFToX7_eMJK9mO_4XN4iHpPF0v8aA0-kvmyAy3ixGMRL6Y9smYwFEC1P_ntwohVG0OzPD8yTmR1NvJPVDlvbbcuMsczX_y-3HSwC0w5WVPLGrkgMyg3QGvb4h-RQ5sub2KQg3Z7HUUv4PtUCV_aZVgub2hmh2pwyi1-HD9B0TH1jjBFnKSQVjd5PvjGipDfIufgPpi_azQry3tUIh10L6gpHLWfRSd9cN3r0ivSg"/>
+<div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight line-clamp-2">Laut Bercerita</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-3">Leila S. Chudori</p>
+<!-- Due Date Badge (Safe) -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-700/50 w-fit mb-4">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-400 text-[14px]">calendar_today</span>
+<span class="text-xs font-medium text-text-main dark:text-gray-200">Due: 14 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Section -->
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex justify-between items-end text-xs">
+<span class="text-text-muted dark:text-gray-400 font-medium">Time remaining</span>
+<span class="text-text-main dark:text-white font-bold">12 days</span>
+</div>
+<div class="h-2 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-3 mt-5">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary dark:text-green-400 text-sm font-bold transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">keyboard_return</span>
+                        Kembalikan
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-white text-sm font-bold transition-colors active:scale-[0.98]">
+                        Perpanjang
+                    </button>
+</div>
+</article>
+<!-- Card 3: Another Safe Item -->
+<article class="bg-surface-light dark:bg-surface-dark rounded-2xl p-4 shadow-card hover:shadow-soft transition-shadow duration-300 border border-transparent dark:border-gray-800 opacity-90">
+<div class="flex gap-4">
+<!-- Book Cover -->
+<div class="relative w-24 shrink-0 aspect-[2/3] rounded-lg overflow-hidden shadow-md group">
+<img alt="Cover of Design of Everyday Things book minimalist style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3FNcPw4mlCnAQOnBAU3tHPszJ0c-RcIQsATLEusBaWQVHfBnReSdsanbpv95tD-DiBFr8DI5jeBV7TuOW3FwdkZ3FH3Lx8vhwJAR9BUuNwMXLfCfm2YO6Um6Z3Ahkgtxbngpj_DkQVpbqwFgSmMnADFnt_Np-zfsURxXKj4ca2r6E7Xxd4D41BPtHSinyxzYEs4oKRMmfwT382L3FgFE2G21qu8P87RmIaYKmWKzcWCWLlfKUVQ16njMNNPIZgLioEM0Mc9kJwg"/>
+<div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight line-clamp-2">Design of Everyday Things</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-3">Don Norman</p>
+<!-- Due Date Badge (Safe) -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-700/50 w-fit mb-4">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-400 text-[14px]">calendar_today</span>
+<span class="text-xs font-medium text-text-main dark:text-gray-200">Due: 20 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Section -->
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex justify-between items-end text-xs">
+<span class="text-text-muted dark:text-gray-400 font-medium">Time remaining</span>
+<span class="text-text-main dark:text-white font-bold">18 days</span>
+</div>
+<div class="h-2 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 10%;"></div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-3 mt-5">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary dark:text-green-400 text-sm font-bold transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">keyboard_return</span>
+                        Kembalikan
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-white text-sm font-bold transition-colors active:scale-[0.98]">
+                        Perpanjang
+                    </button>
+</div>
+</article>
+<!-- Bottom Spacer for fab/nav -->
+<div class="h-8"></div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pb-safe-bottom z-50 shadow-[0_-5px_20px_rgba(0,0,0,0.03)]">
+<div class="flex justify-around items-center h-16 max-w-md mx-auto">
+<a class="flex flex-col items-center justify-center w-full h-full gap-1 group" href="#">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">home</span>
+<span class="text-[10px] font-medium text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full gap-1 group" href="#">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">search</span>
+<span class="text-[10px] font-medium text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">Cari</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full gap-1 relative" href="#">
+<!-- Active Indicator Pill -->
+<div class="absolute -top-[1px] w-12 h-1 bg-primary rounded-b-lg"></div>
+<span class="material-symbols-outlined text-primary text-[24px] fill-current" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-[10px] font-bold text-primary">Riwayat</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full gap-1 group" href="#">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">person</span>
+<span class="text-[10px] font-medium text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">Profil</span>
+</a>
+</div>
+</nav>
+<script>
+        // Simple logic to toggle theme for demonstration if needed, though Tailwind handles class 'dark'
+        // This script is optional but helpful for previewing dark mode if the user's system preference is set.
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+             document.documentElement.classList.add('dark');
+        }
+    </script>
+</body></html>

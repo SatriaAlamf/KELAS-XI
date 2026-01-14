@@ -1,0 +1,7 @@
+export { default as LoginView } from './LoginView.vue'
+export { default as DashboardView } from './DashboardView.vue'
+export { default as BooksView } from './BooksView.vue'
+export { default as MembersView } from './MembersView.vue'
+export { default as TransactionsView } from './TransactionsView.vue'
+export { default as ReportsView } from './ReportsView.vue'
+export { default as SettingsView } from './SettingsView.vue'

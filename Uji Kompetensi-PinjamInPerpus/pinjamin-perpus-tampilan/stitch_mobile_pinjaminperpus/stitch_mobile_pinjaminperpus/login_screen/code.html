@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PinjamIn Perpus - Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#307e32",
+                        "background-light": "#f7faf0",
+                        "background-dark": "#172f30",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#234142",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom iOS-like scrollbar hiding for cleaner look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#131613] dark:text-gray-100 transition-colors duration-300">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top Navigation / Status Area Spacer -->
+<div class="h-14 w-full"></div>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 px-6 pb-8">
+<!-- Branding Header -->
+<div class="flex flex-col items-center gap-4 mt-8 mb-10">
+<div class="w-24 h-24 rounded-2xl bg-primary/10 flex items-center justify-center mb-2 shadow-sm dark:bg-surface-dark">
+<!-- Logo Placeholder -->
+<div class="w-14 h-14 bg-contain bg-center bg-no-repeat" data-alt="Minimalist green library book logo icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlgRQFzfsSKvtwYFtBrCZ8OXLyFBvotxT42e64hhR-OlRHFjiCgsiiGbK93AV9VZDRoGQZkTAPZalGzLWK8-3SrsWXiAw6cbuMizcisCcyfiIGFeyBWhvKrojxQNJxtrm9k1jGqmFfQnjH9qP3Uj7U0lUisvFwy0Cn5Xhjz-sUUBbWIf9AAUTMoLe_JykiSerIXIYqzpr0Dnq8VSLKS_k_FDfh7X26f8uoKuBj6KLD9ZFRp6MeF9WhkCIIdKpi91lai3mUJjE5EQ");'>
+</div>
+</div>
+<div class="text-center">
+<h1 class="text-3xl font-extrabold tracking-tight text-[#131613] dark:text-white mb-1">PinjamIn Perpus</h1>
+<p class="text-[#6b806b] dark:text-gray-400 text-base font-medium">Selamat datang kembali</p>
+</div>
+</div>
+<!-- Login Form -->
+<div class="flex flex-col gap-5 w-full">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#131613] dark:text-gray-200 text-sm font-semibold ml-1">Email</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-gray-200 dark:border-gray-600 bg-surface-light dark:bg-surface-dark px-4 text-base text-[#131613] dark:text-white placeholder-[#6b806b] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-sm" placeholder="nama@email.com" type="email" value=""/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#131613] dark:text-gray-200 text-sm font-semibold ml-1">Password</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-gray-200 dark:border-gray-600 bg-surface-light dark:bg-surface-dark px-4 pr-12 text-base text-[#131613] dark:text-white placeholder-[#6b806b] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-sm" placeholder="••••••" type="password" value=""/>
+<button class="absolute right-0 top-0 h-full px-4 flex items-center justify-center text-[#6b806b] hover:text-primary transition-colors focus:outline-none">
+<span class="material-symbols-outlined" data-icon="Eye" style="font-size: 24px;">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end">
+<a class="text-primary text-sm font-semibold hover:underline decoration-2 underline-offset-4" href="#">Lupa Password?</a>
+</div>
+<!-- Submit Button -->
+<button class="h-14 w-full bg-primary hover:bg-primary/90 active:scale-[0.98] text-white text-base font-bold rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center mt-2">
+                    Masuk
+                </button>
+</div>
+<!-- Spacer -->
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Bottom Actions -->
+<div class="flex flex-col items-center gap-6 mt-auto">
+<!-- Divider -->
+<div class="relative w-full flex items-center py-2">
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+<span class="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-bold tracking-wider">Atau</span>
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+</div>
+<!-- QR Login Button -->
+<button class="w-full h-14 rounded-xl border border-gray-200 dark:border-gray-600 bg-surface-light dark:bg-surface-dark text-[#131613] dark:text-white font-semibold flex items-center justify-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 active:bg-gray-100 transition-colors group">
+<div class="p-1.5 bg-gray-100 dark:bg-gray-600 rounded-lg group-hover:bg-white dark:group-hover:bg-gray-500 transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-green-300" style="font-size: 24px;">qr_code_scanner</span>
+</div>
+<span>Login dengan QR</span>
+</button>
+<!-- Registration Link -->
+<p class="text-[#6b806b] dark:text-gray-400 text-sm font-medium">
+                    Belum punya akun? <a class="text-primary font-bold hover:underline" href="#">Daftar</a>
+</p>
+</div>
+<!-- Bottom safe area spacer -->
+<div class="h-4"></div>
+</div>
+</div>
+</body></html>
